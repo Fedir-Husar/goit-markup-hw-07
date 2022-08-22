@@ -6,20 +6,22 @@
 .technology-title {
     display: none;
 }
-.technology-item {
+.technology-list__item {
     width: 270px;
+
+    &:not(:first-child) {
+        margin-left: 30px;
+    }
 }
 
-.list-techology {
+.techology-list {
     display: flex;
     padding: 0;
     justify-content: space-between;
     height: 101px;
-
-
 }
 
-.icon-box {
+.technology-list__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,12 +32,7 @@
     margin-bottom: 30px;
 }
 
-
-.technology-item:not(:first-child) {
-    margin-left: 30px;
-}
-
-.techology-item-title {
+.technology-list__title {
     margin-bottom: 10px;
 }
 

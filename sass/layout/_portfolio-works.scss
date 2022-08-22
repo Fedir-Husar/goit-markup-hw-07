@@ -3,7 +3,7 @@
     padding-bottom: 94px;
 }
 
-.example-title {
+.portfolio-list__title {
     color: var(--text-color-tittle);
     font-weight: 700;
     font-size: 18px;
@@ -22,13 +22,13 @@
 
 }
 
-.portfolio-descript {
+.portfolio-list__descript {
     border: 1px solid #EEEEEE;
     padding: 20px 24px;
 }
 
 
-.example-desc {
+.portfolio-list__text {
     color: var(--text-color-first);
     font-size: 16px;
     line-height: 1.86;
@@ -50,20 +50,21 @@
     transition: background-color var(--transition-duration) var(--time-funcsion),
         color var(--transition-duration) var(--time-funcsion),
         box-shadow var(--transition-duration) var(--time-funcsion);
-}
 
-.menu-item:not(:last-child) {
+    &:hover,
+    &:focus {
+            color: var(--text-banner-color);
+            background-color: var(--accent-color);
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+
+    }
+
+.menu-list__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.portfolio-menu:hover,
-.portfolio-menu:focus {
-    color: var(--text-banner-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-container {
+.portfolio-list__container {
     position: relative;
     overflow: hidden;
 }
@@ -79,17 +80,19 @@
     align-content: space-between;
 }
 
-.portfolio-link {
+.portfolio-list__link {
     display: block;
-    transition: box-shadow var(--animation-time)
+    transition: box-shadow var(--animation-time);
+    
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
-.slider-text {
+.portfolio-list__slider_text {
     font-weight: 400;
     color: #fff;
     font-size: 18px;
@@ -98,7 +101,7 @@
     margin: 0;
 }
 
-.portfolio-slider {
+.portfolio-list__slider {
 
     position: absolute;
     bottom: -1%;
@@ -109,8 +112,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
-}
-
-.portfolio-link:hover .portfolio-slider {
-    transform: translateY(0);
+    .portfolio-list__link:hover & {
+            transform: translateY(0);
+        }
 }

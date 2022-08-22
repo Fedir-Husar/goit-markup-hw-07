@@ -28,8 +28,6 @@
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 
 .close-button {
@@ -45,6 +43,12 @@
     fill: #000000;
     background-color: rgba(255, 255, 255, 1);
     transition: fill var(--animation-time);
+
+    &:hover,
+    &:focus
+    {
+        fill: var(--accent-color);
+    }
 }
 
 .icon-close {
@@ -52,13 +56,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-}
-
-.close-button:hover,
-.close-button:focus {
-    fill: var(--accent-color);
-
 }
 
 .modal-form {
@@ -114,19 +111,18 @@
     border-radius: 4px;
     transition: border var(--animation-time);
     cursor: pointer;
-}
 
-.form-input:focus-within,
-.comment:focus-within {
-    outline: none;
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
-}
-
-.form-input:focus-within+.modal-icon {
-    fill: var(--accent-color);
-
-    cursor: pointer;
+    &:focus-within
+    {
+        outline: none;
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+    }
+    &:focus-within+.modal-icon 
+    {
+        fill: var(--accent-color);
+        cursor: pointer;
+    }
 }
 
 textarea {
@@ -136,10 +132,12 @@ textarea {
     height: 120px;
     padding: 12px 16px;
     cursor: pointer;
-}
+    
+    &::placeholder 
+    {
+        color: #75757580;
+    }
 
-textarea::placeholder {
-    color: #75757580;
 }
 
 .label-title-comment {
@@ -160,6 +158,12 @@ textarea::placeholder {
     border: 1px solid #21212133;
     border-radius: 4px;
     transition: border var(--animation-time);
+
+    &:focus-within {
+            outline: none;
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+        }
 }
 
 .form-checkbox {
@@ -186,14 +190,13 @@ textarea::placeholder {
     outline-offset: -2px;
     border-radius: 2px;
     margin-right: 4px;
-
     transition: background-color var(--animation-time), outline var(--animation-time);
-}
 
-.form-accept:checked+.checkbox-icon {
-    background-color: var(--accent-color);
-    outline: 2px solid var(--accent-color);
-    outline-offset: -2px;
+.form-accept:checked+& {
+        background-color: var(--accent-color);
+        outline: 2px solid var(--accent-color);
+        outline-offset: -2px;
+    }
 }
 
 .modal-form-button {
@@ -201,14 +204,11 @@ textarea::placeholder {
     margin-left: auto;
     margin-right: auto;
     padding: 10px 56px 10px 55px;
-
     font-weight: 700;
-
     line-height: 1.88;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-
     color: var(--text-banner-color);
     border: 0;
     border-radius: 4px;

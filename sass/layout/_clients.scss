@@ -11,7 +11,7 @@
     transition: color var(--animation-time);
 }
 
-.clients-link {
+.clients-list__link {
 
     color: #afb1b8;
     width: 100%;
@@ -20,9 +20,14 @@
     justify-content: center;
     align-items: center;
     transition: border var(--animation-time);
+
+    &:hover svg,
+    &:focus svg {
+        fill: currentColor;
+        }
 }
 
-.clients-item {
+.clients-list__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,27 +36,22 @@
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #afb1b8;
+
+    &:hover,
+    &:focus {
+            border-color: #2196F3;
+            fill: currentColor;
+        }
 }
 
-.clients-icon {
+.clients-list__icon {
 
     fill: #afb1b8;
     transition: fill var(--animation-time);
 
-}
+    &:hover,
+    &:focus {
+        fill: currentColor;
+        }
 
-.clients-link:hover svg,
-.clients-link:focus svg {
-    fill: currentColor;
-}
-
-.clients-icon:hover,
-.clients-icon:focus {
-    fill: currentColor;
-}
-
-.clients-item:hover,
-.clients-item:focus {
-    border-color: #2196F3;
-    fill: currentColor;
 }
