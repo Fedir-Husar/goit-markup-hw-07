@@ -62,9 +62,10 @@
         }
 }
 .contakts{
+    fill: currentColor;
     display: flex;
     align-items: center;
-    transition: fill var(--animation-time);
+    transition: color var(--animation-time);
     color: var(--text-color-first);
     height: 16px;
     gap: 10px;

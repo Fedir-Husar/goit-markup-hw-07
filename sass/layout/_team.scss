@@ -72,12 +72,11 @@
     justify-content: center;
     align-items: center;
     color: #afb1b8;
-    transition: fill var(--animation-time);
-    transition: background-color var(--animation-time);
+    transition: background-color var(--animation-time), color var(--animation-time) ;
 
     &:hover,
     &:focus {
-        color: #EEEEEE;
+        color: #ffffff;
         background-color: var(--accent-color);
     }
 }
@@ -92,7 +91,6 @@
 
 .team-social__img {
     fill: currentColor;
-    transition: color var(--animation-time);
-    transition: background-color var(--animation-time);
+ 
 }
 

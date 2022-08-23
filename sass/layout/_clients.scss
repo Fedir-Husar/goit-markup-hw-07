@@ -13,35 +13,37 @@
 
 .clients-list__link {
 
-    color: #afb1b8;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    fill: #afb1b8;
+
+    color: #afb1b8;
+    width: 100%;
+    height: 100%;
     transition: border var(--animation-time);
 
     &:hover svg,
     &:focus svg {
         fill: currentColor;
         }
-}
-
-.clients-list__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 92px;
-    width: 170px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    fill: #afb1b8;
 
     &:hover,
     &:focus {
-            border-color: #2196F3;
-            fill: currentColor;
-        }
+        border-color: #2196F3;
+        fill: currentColor;
+            }
+}
+
+.clients-list__item {
+ 
+    height: 92px;
+    width: 170px;
+   
+
+
 }
 
 .clients-list__icon {
